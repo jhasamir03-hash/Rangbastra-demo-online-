@@ -21,7 +21,7 @@ export const ProductImage: React.FC<ProductImageProps> = ({
   const [loadError, setLoadError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const photoSrc = getPhotoSrc(product.filename);
+  const photoSrc = product.image ? getPhotoSrc(product.image) : getPhotoSrc(product.filename);
 
   const aspectClass =
     aspectRatio === 'portrait'

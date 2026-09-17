@@ -51,10 +51,40 @@ export const PhotoProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   };
 
   const getPhotoSrc = (filename: string): string => {
+    if (!filename) return '/images/products/product-1.jpg';
     if (customPhotos[filename]) return customPhotos[filename];
     if (customPhotos[filename.toLowerCase()]) return customPhotos[filename.toLowerCase()];
-    // Default to direct asset path
-    return `/${filename}`;
+
+    // If already absolute URL or root-relative path
+    if (filename.startsWith('/') || filename.startsWith('http://') || filename.startsWith('https://')) {
+      return filename;
+    }
+
+    // Direct mapping from original filenames to production public assets
+    const nameMap: Record<string, string> = {
+      'img-20260917-wa0002.jpg': '/images/products/product-1.jpg',
+      'img-20260917-wa0001.jpg': '/images/products/product-2.jpg',
+      'img-20260917-wa0003.jpg': '/images/products/product-3.jpg',
+      'img-20260917-wa0004.jpg': '/images/products/product-4.jpg',
+      'img-20260917-wa0005.jpg': '/images/products/product-5.jpg',
+      'img-20260917-wa0006.jpg': '/images/products/product-6.jpg',
+      'img-20260917-wa0000.jpg': '/images/products/product-7.jpg',
+      'product-1.jpg': '/images/products/product-1.jpg',
+      'product-2.jpg': '/images/products/product-2.jpg',
+      'product-3.jpg': '/images/products/product-3.jpg',
+      'product-4.jpg': '/images/products/product-4.jpg',
+      'product-5.jpg': '/images/products/product-5.jpg',
+      'product-6.jpg': '/images/products/product-6.jpg',
+      'product-7.jpg': '/images/products/product-7.jpg',
+    };
+
+    const key = filename.toLowerCase();
+    if (nameMap[key]) {
+      return nameMap[key];
+    }
+
+    // Default to public images directory
+    return `/images/products/${filename}`;
   };
 
   const hasCustomPhoto = (filename: string): boolean => {

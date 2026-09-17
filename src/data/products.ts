@@ -4,6 +4,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'product-1',
     filename: 'IMG-20260917-WA0002.jpg',
+    image: '/images/products/product-1.jpg',
     name: 'Plum Zari Royale',
     price: '₹2,15,000',
     rawPrice: 215000,
@@ -62,6 +63,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'product-2',
     filename: 'IMG-20260917-WA0001.jpg',
+    image: '/images/products/product-2.jpg',
     name: 'Midnight Blue & Dusty Rose Velvet',
     price: '₹1,05,000',
     rawPrice: 105000,
@@ -120,6 +122,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'product-3',
     filename: 'IMG-20260917-WA0003.jpg',
+    image: '/images/products/product-3.jpg',
     name: 'Cerulean Floral Pleated Edit',
     price: '₹2,30,000',
     rawPrice: 230000,
@@ -167,6 +170,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'product-4',
     filename: 'IMG-20260917-WA0004.jpg',
+    image: '/images/products/product-4.jpg',
     name: 'Sage Chevron & Crimson Bandhani',
     price: '₹2,60,000',
     rawPrice: 260000,
@@ -214,6 +218,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'product-5',
     filename: 'IMG-20260917-WA0005.jpg',
+    image: '/images/products/product-5.jpg',
     name: 'Rani Pink Flared Blossom',
     price: '₹85,000',
     rawPrice: 85000,
@@ -261,6 +266,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'product-6',
     filename: 'IMG-20260917-WA0006.jpg',
+    image: '/images/products/product-6.jpg',
     name: 'Crimson Medallion & Ivory Drape',
     price: '₹85,000',
     rawPrice: 85000,
@@ -308,6 +314,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'product-7',
     filename: 'IMG-20260917-WA0000.jpg',
+    image: '/images/products/product-7.jpg',
     name: 'Emerald Green Scalloped Hem',
     price: '₹1,20,000',
     rawPrice: 120000,
@@ -365,6 +372,7 @@ export const REELS_DATA: AtelierReel[] = [
     productName: 'Plum Zari Royale',
     productPrice: '₹2,15,000',
     productFilename: 'IMG-20260917-WA0002.jpg',
+    productImage: '/images/products/product-1.jpg',
     tags: ['#NavratriFestive', '#PlumLehenga', '#GrandTwirl'],
   },
   {
@@ -377,6 +385,7 @@ export const REELS_DATA: AtelierReel[] = [
     productName: 'Midnight Blue & Dusty Rose Velvet',
     productPrice: '₹1,05,000',
     productFilename: 'IMG-20260917-WA0001.jpg',
+    productImage: '/images/products/product-2.jpg',
     tags: ['#VelvetCouture', '#DandiyaNights', '#Rangbastra'],
   },
   {
@@ -389,6 +398,7 @@ export const REELS_DATA: AtelierReel[] = [
     productName: 'Cerulean Floral Pleated Edit',
     productPrice: '₹2,30,000',
     productFilename: 'IMG-20260917-WA0003.jpg',
+    productImage: '/images/products/product-3.jpg',
     tags: ['#PastelBridal', '#PleatedLehenga', '#FestiveSway'],
   },
   {
@@ -401,6 +411,7 @@ export const REELS_DATA: AtelierReel[] = [
     productName: 'Sage Chevron & Crimson Bandhani',
     productPrice: '₹2,60,000',
     productFilename: 'IMG-20260917-WA0004.jpg',
+    productImage: '/images/products/product-4.jpg',
     tags: ['#ChevronZari', '#BandhaniDupatta', '#GarbaTwirl'],
   },
   {
@@ -413,6 +424,7 @@ export const REELS_DATA: AtelierReel[] = [
     productName: 'Rani Pink Flared Blossom',
     productPrice: '₹85,000',
     productFilename: 'IMG-20260917-WA0005.jpg',
+    productImage: '/images/products/product-5.jpg',
     tags: ['#NavratriGarba', '#RaniPinkTwirl', '#FestiveEdit'],
   },
   {
@@ -425,6 +437,7 @@ export const REELS_DATA: AtelierReel[] = [
     productName: 'Crimson Medallion & Ivory Drape',
     productPrice: '₹85,000',
     productFilename: 'IMG-20260917-WA0006.jpg',
+    productImage: '/images/products/product-6.jpg',
     tags: ['#BanarasiSilk', '#CoinFringe', '#NavratriRed'],
   },
   {
@@ -437,6 +450,7 @@ export const REELS_DATA: AtelierReel[] = [
     productName: 'Emerald Green Scalloped Hem',
     productPrice: '₹1,20,000',
     productFilename: 'IMG-20260917-WA0000.jpg',
+    productImage: '/images/products/product-7.jpg',
     tags: ['#EmeraldLehenga', '#ScallopEmbroidery', '#AtelierCraft'],
   },
 ];

@@ -20,6 +20,7 @@ export interface FabricCare {
 export interface Product {
   id: string;
   filename: string;
+  image: string;
   name: string;
   price: string;
   rawPrice: number;
@@ -56,6 +57,7 @@ export interface AtelierReel {
   productName: string;
   productPrice: string;
   productFilename: string;
+  productImage?: string;
   tags: string[];
 }
 

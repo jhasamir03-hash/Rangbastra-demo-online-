@@ -1,0 +1,6 @@
+{
+  "name": "Rangbastra - Navratri & Festive Bridal Atelier",
+  "description": "Rangbastra haute couture festive and bridal lehenga catalogue curated by Bhagirathi. Handcrafted zardozi, bespoke made-to-measure tailoring, and Navratri festive edits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

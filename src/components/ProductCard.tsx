@@ -71,9 +71,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <button
             id={`card-quick-enquire-btn-${product.id}`}
             onClick={handleDirectWhatsApp}
-            title="Enquire on WhatsApp"
+            title="Enquire on WhatsApp: 091737 85595"
             className="p-2 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] rounded-xs transition-colors cursor-pointer"
-            aria-label="Enquire on WhatsApp"
+            aria-label="Enquire on WhatsApp: 091737 85595"
           >
             <MessageCircle className="w-4 h-4 fill-current" />
           </button>
@@ -81,7 +81,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       </div>
 
       {/* Information Block */}
-      <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between bg-[#FFFFFF]">
+      <div className="p-4 sm:p-6 flex flex-col flex-grow justify-between bg-[#FFFFFF]">
         <div>
           <div className="flex items-center justify-between gap-2 mb-1.5">
             <span className="text-[10px] tracking-[0.22em] text-[#B89358] uppercase font-sans font-semibold">
@@ -99,18 +99,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             {product.name}
           </h3>
 
-          <p className="text-xs text-[#574F48] font-sans font-normal mt-2 line-clamp-2 leading-relaxed">
+          <p className="text-xs text-[#574F48] font-sans font-normal mt-1.5 sm:mt-2 line-clamp-2 leading-relaxed">
             {product.description}
           </p>
         </div>
 
         {/* Price & Action Row */}
-        <div className="mt-5 pt-4 border-t border-[rgba(184,147,88,0.2)] flex items-center justify-between">
+        <div className="mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-[rgba(184,147,88,0.2)] flex items-center justify-between">
           <div>
             <span className="text-[9px] uppercase tracking-[0.2em] text-[#6E6259] block font-sans font-medium">
               Showroom Price
             </span>
-            <span className="font-serif text-lg sm:text-xl font-bold text-[#1C1817] tracking-wide">
+            <span className="font-serif text-base sm:text-xl font-bold text-[#1C1817] tracking-wide">
               {product.price}
             </span>
           </div>
@@ -118,9 +118,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <button
             id={`card-whatsapp-link-${product.id}`}
             onClick={handleDirectWhatsApp}
-            className="inline-flex items-center gap-1.5 text-xs text-[#1E7E34] hover:text-[#155724] font-sans font-semibold tracking-wider uppercase transition-colors cursor-pointer"
+            title="Enquire on WhatsApp: 091737 85595"
+            className="inline-flex items-center gap-1.5 py-1.5 px-2.5 rounded-xs bg-[#25D366]/12 hover:bg-[#25D366]/22 text-xs text-[#1E7E34] font-sans font-semibold tracking-wider uppercase transition-colors cursor-pointer"
           >
-            <MessageCircle className="w-3.5 h-3.5" />
+            <MessageCircle className="w-3.5 h-3.5 fill-current text-[#25D366]" />
             <span>Enquire</span>
           </button>
         </div>

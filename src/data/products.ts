@@ -506,18 +506,23 @@ export const BRAND_DETAILS = {
   brandName: 'RANGBASTRA',
   ownerName: 'Bhagirathi',
   tagline: 'Haute Couture & Bridal Atelier',
+  whatsappRawNumber: '091737 85595',
+  whatsappNumber: '919173785595',
+  whatsappDisplay: '+91 91737 85595',
   instagramHandle: '@rangbastra',
   instagramUrl: 'https://instagram.com',
   whatsappMessagePrefix: 'Hi Rangbastra,',
   generalWhatsAppMessage:
     "Hi Rangbastra, I'm exploring the Festive & Occasion Collection and would like to enquire about bespoke showroom pieces and availability.",
-  createProductWhatsAppUrl: (productName: string, price: string) => {
-    const text = `Hi Rangbastra, I'm interested in the ${productName} priced at ${price}. Please share more details.`;
-    return `https://wa.me/?text=${encodeURIComponent(text)}`;
+  createProductWhatsAppUrl: (productName: string, price: string, customDetails?: string) => {
+    const details = customDetails ? ` (${customDetails})` : '';
+    const text = `Hi Rangbastra, I'm interested in the ${productName}${details} priced at ${price}. Please share more details and availability.`;
+    return `https://wa.me/919173785595?text=${encodeURIComponent(text)}`;
   },
-  createGeneralWhatsAppUrl: () => {
+  createGeneralWhatsAppUrl: (customMessage?: string) => {
     const text =
+      customMessage ||
       "Hi Rangbastra, I'm exploring the Festive & Occasion Collection and would like to enquire about bespoke showroom pieces and availability.";
-    return `https://wa.me/?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/919173785595?text=${encodeURIComponent(text)}`;
   },
 };

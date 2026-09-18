@@ -80,20 +80,19 @@ export const ProductPageView: React.FC<ProductPageViewProps> = ({
 
   const handleOpenWhatsApp = () => {
     const sizeNote = selectedSize === 'bespoke' ? 'Bespoke Custom Fitting' : `Size ${selectedSize.toUpperCase()}`;
-    const text = `Hi Rangbastra, I'm interested in the ${product.name} (${sizeNote}) priced at ${product.price}. Please share more details and availability.`;
-    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+    const url = BRAND_DETAILS.createProductWhatsAppUrl(product.name, product.price, sizeNote);
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   const handleBookConsultation = () => {
-    const text = `Hi Bhagirathi, I would like to book a showroom video consultation to discuss custom measurements and fabric for the ${product.name}.`;
-    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+    const text = `Hi Bhagirathi, I would like to book a showroom video consultation to discuss custom measurements and fabric for the ${product.name} (${product.price}).`;
+    const url = BRAND_DETAILS.createGeneralWhatsAppUrl(text);
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   const handleReelWhatsApp = (reel: AtelierReel) => {
     const text = `Hi Rangbastra, I watched the dedicated motion reel "${reel.title}" for ${product.name} (${product.price}). Please share more video clips and custom fitting details.`;
-    const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+    const url = BRAND_DETAILS.createGeneralWhatsAppUrl(text);
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
@@ -125,7 +124,7 @@ export const ProductPageView: React.FC<ProductPageViewProps> = ({
   };
 
   return (
-    <div id="product-page-container" className="w-full bg-[#FAF8F5] text-[#1C1817] min-h-screen">
+    <div id="product-page-container" className="w-full bg-[#FAF8F5] text-[#1C1817] min-h-screen pb-20 sm:pb-0">
       
       {/* Top Breadcrumb & Back Bar */}
       <div className="w-full bg-[#FFFFFF] border-b border-[rgba(184,147,88,0.2)] py-3.5 px-4 sm:px-8 shadow-xs">
@@ -375,10 +374,11 @@ export const ProductPageView: React.FC<ProductPageViewProps> = ({
               <button
                 id="product-enquire-whatsapp-cta"
                 onClick={handleOpenWhatsApp}
+                title="Enquire on WhatsApp: 091737 85595"
                 className="w-full py-4 px-6 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] font-sans font-bold text-xs sm:text-sm tracking-[0.2em] uppercase rounded-xs transition-all duration-200 shadow-lg flex items-center justify-center gap-3 cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 fill-current" />
-                <span>ENQUIRE ON WHATSAPP</span>
+                <span>ENQUIRE ON WHATSAPP &bull; 091737 85595</span>
               </button>
 
               <button
@@ -948,6 +948,27 @@ export const ProductPageView: React.FC<ProductPageViewProps> = ({
           </div>
         </div>
       )}
+
+      {/* Mobile Sticky Bottom Enquire Bar (Mobile Optimization) */}
+      <div className="sm:hidden fixed bottom-0 inset-x-0 z-30 bg-[#FFFFFF]/98 backdrop-blur-md border-t border-[rgba(184,147,88,0.3)] px-4 py-3 flex items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+        <div className="min-w-0 flex-1">
+          <span className="text-[9px] uppercase tracking-wider text-[#6E6259] block font-sans truncate font-medium">
+            {product.name}
+          </span>
+          <span className="font-serif text-sm font-bold text-[#1C1817] block">
+            {product.price}
+          </span>
+        </div>
+
+        <button
+          onClick={handleOpenWhatsApp}
+          title="Enquire on WhatsApp: 091737 85595"
+          className="py-2.5 px-4 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] font-bold text-xs uppercase tracking-wider font-sans rounded-xs flex items-center gap-1.5 shadow-md shrink-0 cursor-pointer active:scale-95 transition-transform"
+        >
+          <MessageCircle className="w-4 h-4 fill-current" />
+          <span>WhatsApp 091737 85595</span>
+        </button>
+      </div>
 
     </div>
   );

@@ -26,17 +26,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
         {/* Navratri Festive Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[rgba(184,147,88,0.35)] shadow-xs mb-6 sm:mb-8 animate-in fade-in duration-500">
-          <Sparkles className="w-3.5 h-3.5 text-[#B89358]" />
-          <span className="text-[10px] sm:text-[11px] tracking-[0.26em] uppercase text-[#9B2226] font-sans font-semibold">
+        <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[rgba(184,147,88,0.35)] shadow-xs mb-5 sm:mb-8 animate-in fade-in duration-500 max-w-full">
+          <Sparkles className="w-3.5 h-3.5 text-[#B89358] shrink-0" />
+          <span className="text-[9px] sm:text-[11px] tracking-[0.16em] sm:tracking-[0.24em] uppercase text-[#9B2226] font-sans font-semibold truncate sm:whitespace-normal">
             NAVRATRI & FESTIVE BRIDAL EDIT &bull; CURATED BY BHAGIRATHI
           </span>
         </div>
 
-        {/* Grand Brand Headline in Montserrat */}
+        {/* Grand Brand Headline in Playfair / Serif */}
         <h1
           id="hero-brand-title"
-          className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-[0.12em] text-[#1C1817] uppercase leading-[1.08] mb-5 sm:mb-7"
+          className="font-serif text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-[0.14em] sm:tracking-[0.18em] text-[#1C1817] uppercase leading-[1.08] mb-4 sm:mb-7"
         >
           {BRAND_DETAILS.brandName}
         </h1>
@@ -44,7 +44,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Editorial Subtitle & Mission Statement */}
         <p
           id="hero-narrative"
-          className="text-base sm:text-lg md:text-xl text-[#574F48] font-sans font-normal leading-relaxed max-w-2xl mx-auto mb-9 sm:mb-11"
+          className="text-sm sm:text-lg md:text-xl text-[#574F48] font-sans font-normal leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-11 px-2 sm:px-0"
         >
           Nine nights of festive celebration, royal circular flares, and hand-embroidered zardozi crafted for vibrant Garba twirls and ceremonial splendour.
         </p>

@@ -204,10 +204,11 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
             <button
               id="modal-whatsapp-enquiry-cta"
               onClick={handleOpenWhatsApp}
+              title="Enquire on WhatsApp: 091737 85595"
               className="w-full py-4 px-6 bg-[#25D366] hover:bg-[#20ba5a] text-[#0A0A0A] font-sans font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase rounded-xs transition-all duration-200 shadow-xl flex items-center justify-center gap-2.5 hover:scale-[1.01]"
             >
               <MessageCircle className="w-5 h-5 fill-current" />
-              <span>ENQUIRE ON WHATSAPP</span>
+              <span>ENQUIRE ON WHATSAPP: 091737 85595</span>
             </button>
 
             <div className="flex items-center justify-center gap-2 text-[11px] text-[#A0A0A0] font-sans">

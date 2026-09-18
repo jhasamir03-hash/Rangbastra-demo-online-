@@ -63,10 +63,10 @@ export const ShowroomDemoDrawer: React.FC = () => {
                 2. Direct WhatsApp Conversion
               </span>
               <p className="text-[11px] text-[#A0A0A0]">
-                Every product generates a pre-formatted WhatsApp enquiry:
+                Every product enquiry routes directly to <strong className="text-[#25D366]">091737 85595</strong> with auto-filled details:
               </p>
               <div className="p-2 bg-[#0F0F0F] rounded-xs border border-[#25D366]/30 text-[11px] text-[#25D366] italic">
-                "Hi Rangbastra, I'm interested in the [Product] priced at ₹[Price]. Please share more details."
+                "Hi Rangbastra, I'm interested in the [Product] priced at ₹[Price]. Please share more details and availability."
               </div>
             </div>
 

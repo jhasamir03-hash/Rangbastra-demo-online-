@@ -76,7 +76,8 @@ export const Footer: React.FC = () => {
                 <button
                   onClick={handleWhatsApp}
                   className="p-2.5 rounded-full bg-[#2A2422] hover:bg-[#38312E] border border-[rgba(184,147,88,0.3)] hover:border-[#25D366] text-[#D8C0A0] hover:text-[#25D366] transition-all cursor-pointer"
-                  aria-label="WhatsApp Concierge"
+                  aria-label="WhatsApp Concierge: 091737 85595"
+                  title="WhatsApp: 091737 85595"
                 >
                   <MessageCircle className="w-4 h-4" />
                 </button>
@@ -148,10 +149,11 @@ export const Footer: React.FC = () => {
               <button
                 id="footer-whatsapp-btn"
                 onClick={handleWhatsApp}
+                title="Direct WhatsApp: 091737 85595"
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] font-semibold rounded-full text-xs tracking-wider uppercase transition-colors shadow-md cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
-                <span>WhatsApp: Enquire with Bhagirathi</span>
+                <span>WhatsApp: 091737 85595</span>
               </button>
             </div>
           </div>

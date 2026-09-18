@@ -43,24 +43,24 @@ export const ReviewsSection: React.FC = () => {
   return (
     <section
       id="reviews-section"
-      className="w-full bg-[#FAF8F5] text-[#1C1817] py-20 sm:py-28 border-b border-[rgba(184,147,88,0.22)]"
+      className="w-full bg-[#FAF8F5] text-[#1C1817] py-10 sm:py-20 md:py-28 border-b border-[rgba(184,147,88,0.22)]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-[#9B2226]/10 text-[#9B2226] text-[10px] font-sans font-semibold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-[#9B2226]/10 text-[#9B2226] text-[9.5px] sm:text-[10px] font-sans font-semibold tracking-wider uppercase">
               <Sparkles className="w-3 h-3 text-[#B89358]" />
               <span>CLIENT DIARIES & WORDS</span>
             </div>
             <h2
               id="reviews-heading"
-              className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1C1817] tracking-tight"
+              className="font-serif text-[clamp(1.75rem,5.5vw,3rem)] font-bold text-[#1C1817] tracking-tight"
             >
               RATINGS & EXPERIENCES
             </h2>
-            <p className="text-xs sm:text-sm text-[#574F48] font-sans font-normal mt-2 max-w-lg">
+            <p className="text-xs sm:text-sm text-[#574F48] font-sans font-normal mt-1.5 sm:mt-2 max-w-lg leading-relaxed">
               Read real accounts from clients, brides, and Garba dancers who commissioned bespoke Rangbastra silhouettes.
             </p>
           </div>
@@ -69,7 +69,7 @@ export const ReviewsSection: React.FC = () => {
             <button
               id="write-review-btn"
               onClick={() => setShowModal(true)}
-              className="px-5 py-2.5 bg-[#FFFFFF] hover:bg-[#FAF7F2] border border-[rgba(184,147,88,0.4)] hover:border-[#B89358] text-[#1C1817] text-xs font-sans font-semibold tracking-wider uppercase rounded-xs transition-colors flex items-center gap-2 shadow-xs cursor-pointer"
+              className="px-4 sm:px-5 py-2.5 bg-[#FFFFFF] hover:bg-[#FAF7F2] border border-[rgba(184,147,88,0.4)] hover:border-[#B89358] text-[#1C1817] text-[11px] sm:text-xs font-sans font-semibold tracking-wider uppercase rounded-xs transition-colors flex items-center gap-2 shadow-xs cursor-pointer"
             >
               <MessageSquarePlus className="w-3.5 h-3.5 text-[#B89358]" />
               <span>Share Your Review</span>
@@ -78,9 +78,9 @@ export const ReviewsSection: React.FC = () => {
         </div>
 
         {/* Ratings Overview Banner */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 sm:p-8 bg-[#FFFFFF] border border-[rgba(184,147,88,0.25)] rounded-xs mb-12 items-center shadow-sm">
-          <div className="md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-[rgba(184,147,88,0.2)] pb-6 md:pb-0 md:pr-8">
-            <span className="font-serif text-5xl sm:text-6xl text-[#1C1817] font-bold leading-none block">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 p-4 sm:p-8 bg-[#FFFFFF] border border-[rgba(184,147,88,0.25)] rounded-xs mb-8 sm:mb-12 items-center shadow-sm">
+          <div className="md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-[rgba(184,147,88,0.2)] pb-5 md:pb-0 md:pr-8">
+            <span className="font-serif text-4xl sm:text-6xl text-[#1C1817] font-bold leading-none block">
               4.9
             </span>
             <div className="flex items-center justify-center md:justify-start gap-1 text-[#CA8A04] my-2">
@@ -93,32 +93,32 @@ export const ReviewsSection: React.FC = () => {
             </span>
           </div>
 
-          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center sm:text-left">
+          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center sm:text-left">
             <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Zardozi & Zari</span>
-              <span className="font-serif text-xl text-[#1C1817] font-bold">5.0 / 5.0</span>
+              <span className="text-[9.5px] sm:text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Zardozi & Zari</span>
+              <span className="font-serif text-lg sm:text-xl text-[#1C1817] font-bold">5.0 / 5.0</span>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Bespoke Fit</span>
-              <span className="font-serif text-xl text-[#1C1817] font-bold">4.9 / 5.0</span>
+              <span className="text-[9.5px] sm:text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Bespoke Fit</span>
+              <span className="font-serif text-lg sm:text-xl text-[#1C1817] font-bold">4.9 / 5.0</span>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Ghera Flare</span>
-              <span className="font-serif text-xl text-[#1C1817] font-bold">5.0 / 5.0</span>
+              <span className="text-[9.5px] sm:text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Ghera Flare</span>
+              <span className="font-serif text-lg sm:text-xl text-[#1C1817] font-bold">5.0 / 5.0</span>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Consultation</span>
-              <span className="font-serif text-xl text-[#1C1817] font-bold">5.0 / 5.0</span>
+              <span className="text-[9.5px] sm:text-[10px] uppercase tracking-wider text-[#6E6259] block font-sans font-medium">Consultation</span>
+              <span className="font-serif text-lg sm:text-xl text-[#1C1817] font-bold">5.0 / 5.0</span>
             </div>
           </div>
         </div>
 
         {/* Reviews Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
           {reviewsList.map((rev) => (
             <div
               key={rev.id}
-              className="p-6 sm:p-8 bg-[#FFFFFF] border border-[rgba(184,147,88,0.22)] hover:border-[#B89358] rounded-xs space-y-4 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+              className="p-4 sm:p-7 lg:p-8 bg-[#FFFFFF] border border-[rgba(184,147,88,0.22)] hover:border-[#B89358] rounded-xs space-y-3 sm:space-y-4 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">

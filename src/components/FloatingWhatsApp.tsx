@@ -35,7 +35,7 @@ export const FloatingWhatsApp: React.FC = () => {
             duration: 0.65,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="fixed bottom-5 right-5 z-40 flex items-center gap-2.5"
+          className="fixed bottom-4 right-3.5 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2.5"
         >
           {/* Helper label pill */}
           <AnimatePresence>

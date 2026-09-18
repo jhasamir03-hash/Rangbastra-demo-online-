@@ -164,32 +164,31 @@ export const ProductPageView: React.FC<ProductPageViewProps> = ({
               <ProductImage
                 product={product}
                 aspectRatio="portrait"
-                className="w-full h-auto min-h-[480px] sm:min-h-[620px] max-h-[820px] object-cover"
+                className="w-full h-auto min-h-[300px] sm:min-h-[550px] max-h-[750px] object-cover"
               />
 
               {/* Photo Asset Tag */}
-              <div className="absolute bottom-4 left-4 z-20">
-                <span className="text-[10px] tracking-widest uppercase px-3 py-1 bg-[#FFFFFF]/90 text-[#1C1817] border border-[rgba(184,147,88,0.35)] shadow-xs font-sans font-medium">
-                  Atelier Photo: {product.filename}
+              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-20">
+                <span className="text-[9px] sm:text-[10px] tracking-widest uppercase px-2.5 sm:px-3 py-0.5 sm:py-1 bg-[#FFFFFF]/90 text-[#1C1817] border border-[rgba(184,147,88,0.35)] shadow-xs font-sans font-medium">
+                  Atelier: {product.filename}
                 </span>
               </div>
 
-              {/* Navratri Twirl Badge */}
-              <div className="absolute top-4 left-4 z-20">
-                <span className="inline-flex items-center gap-1 text-[9px] tracking-wider uppercase px-2.5 py-1 bg-[#9B2226] text-[#FFFFFF] font-sans font-semibold shadow-xs">
+              {/* Top overlay badges: left pill and right reel link (Responsive wrap to prevent overflow on 320px-375px) */}
+              <div className="absolute top-3 inset-x-3 z-20 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+                <span className="inline-flex items-center gap-1 text-[8.5px] sm:text-[9px] tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 bg-[#9B2226] text-[#FFFFFF] font-sans font-semibold shadow-xs rounded-xs pointer-events-auto shrink-0">
                   <Sparkles className="w-2.5 h-2.5" />
                   <span>Navratri Garba Ready</span>
                 </span>
-              </div>
 
-              {/* Quick Jump to Dedicated Reel */}
-              <a
-                href="#product-dedicated-reel-section"
-                className="absolute top-4 right-4 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FFFFFF]/95 hover:bg-[#FFFFFF] text-[#1C1817] border border-[rgba(184,147,88,0.45)] hover:border-[#B89358] rounded-full text-xs font-sans tracking-wider uppercase transition-all shadow-md font-semibold"
-              >
-                <Play className="w-3 h-3 text-[#9B2226] fill-current" />
-                <span>Watch Reel in Motion ({matchedReel.duration})</span>
-              </a>
+                <a
+                  href="#product-dedicated-reel-section"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 bg-[#FFFFFF]/95 hover:bg-[#FFFFFF] text-[#1C1817] border border-[rgba(184,147,88,0.45)] hover:border-[#B89358] rounded-full text-[10px] sm:text-xs font-sans tracking-wider uppercase transition-all shadow-md font-semibold pointer-events-auto shrink-0"
+                >
+                  <Play className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#9B2226] fill-current" />
+                  <span>Watch Reel ({matchedReel.duration})</span>
+                </a>
+              </div>
             </div>
 
             {/* Gallery Perspective Angles */}
@@ -950,7 +949,7 @@ export const ProductPageView: React.FC<ProductPageViewProps> = ({
       )}
 
       {/* Mobile Sticky Bottom Enquire Bar (Mobile Optimization) */}
-      <div className="sm:hidden fixed bottom-0 inset-x-0 z-30 bg-[#FFFFFF]/98 backdrop-blur-md border-t border-[rgba(184,147,88,0.3)] px-4 py-3 flex items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+      <div className="sm:hidden fixed bottom-0 inset-x-0 z-30 bg-[#FFFFFF]/98 backdrop-blur-md border-t border-[rgba(184,147,88,0.3)] px-3.5 py-2.5 flex items-center justify-between gap-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
         <div className="min-w-0 flex-1">
           <span className="text-[9px] uppercase tracking-wider text-[#6E6259] block font-sans truncate font-medium">
             {product.name}
@@ -963,10 +962,10 @@ export const ProductPageView: React.FC<ProductPageViewProps> = ({
         <button
           onClick={handleOpenWhatsApp}
           title="Enquire on WhatsApp: 091737 85595"
-          className="py-2.5 px-4 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] font-bold text-xs uppercase tracking-wider font-sans rounded-xs flex items-center gap-1.5 shadow-md shrink-0 cursor-pointer active:scale-95 transition-transform"
+          className="py-2 px-3 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] font-bold text-xs uppercase tracking-wider font-sans rounded-xs flex items-center gap-1.5 shadow-md shrink-0 cursor-pointer active:scale-95 transition-transform"
         >
-          <MessageCircle className="w-4 h-4 fill-current" />
-          <span>WhatsApp 091737 85595</span>
+          <MessageCircle className="w-3.5 h-3.5 fill-current shrink-0" />
+          <span>WhatsApp Enquire</span>
         </button>
       </div>
 

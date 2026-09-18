@@ -177,24 +177,24 @@ export const ReelsSection: React.FC<ReelsSectionProps> = ({
   return (
     <section
       id="reels-section"
-      className="w-full bg-[#FAF8F5] text-[#1C1817] py-16 sm:py-24 border-b border-[rgba(184,147,88,0.22)] overflow-hidden"
+      className="w-full bg-[#FAF8F5] text-[#1C1817] py-10 sm:py-20 md:py-24 border-b border-[rgba(184,147,88,0.22)] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8 sm:mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-5 mb-6 sm:mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 mb-2.5 px-3 py-1 rounded-full bg-[#9B2226]/10 text-[#9B2226] text-[10px] font-sans font-semibold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 mb-2 sm:mb-2.5 px-3 py-1 rounded-full bg-[#9B2226]/10 text-[#9B2226] text-[9.5px] sm:text-[10px] font-sans font-semibold tracking-wider uppercase">
               <Sparkles className="w-3 h-3 text-[#B89358]" />
               <span>INTERACTIVE SLIDESHOW &bull; WATCH ONE BY ONE</span>
             </div>
             <h2
               id="reels-section-heading"
-              className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1C1817] tracking-tight"
+              className="font-serif text-[clamp(1.75rem,5.5vw,3rem)] font-bold text-[#1C1817] tracking-tight"
             >
               CRAFT & FLARE REELS
             </h2>
-            <p className="text-xs sm:text-sm text-[#574F48] font-sans font-normal mt-2 max-w-lg">
+            <p className="text-xs sm:text-sm text-[#574F48] font-sans font-normal mt-1.5 sm:mt-2 max-w-lg leading-relaxed">
               Swipe through dedicated couture video reels one by one. Experience 360° circular flares, royal zari shimmer, and garment movement for festive Garba nights.
             </p>
           </div>
@@ -228,9 +228,9 @@ export const ReelsSection: React.FC<ReelsSectionProps> = ({
         </div>
 
         {/* Quick Outfit Selector Pill Tabs */}
-        <div className="mb-8">
-          <div className="flex items-center justify-between gap-2 mb-2.5">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-[#6E6259] font-sans font-semibold">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex items-center justify-between gap-2 mb-2 sm:mb-2.5">
+            <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#6E6259] font-sans font-semibold">
               SELECT OUTFIT TO WATCH REEL:
             </span>
             <span className="text-[10px] text-[#B89358] font-sans font-medium hidden sm:inline-block">
@@ -238,14 +238,14 @@ export const ReelsSection: React.FC<ReelsSectionProps> = ({
             </span>
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin">
+          <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 scrollbar-thin">
             {reels.map((reel, idx) => {
               const isSelected = currentSlideIndex === idx;
               return (
                 <button
                   key={reel.id}
                   onClick={() => goToSlide(idx)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-sans tracking-wider uppercase whitespace-nowrap transition-all cursor-pointer font-semibold flex items-center gap-1.5 ${
+                  className={`px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-sans tracking-wider uppercase whitespace-nowrap transition-all cursor-pointer font-semibold flex items-center gap-1.5 ${
                     isSelected
                       ? 'bg-[#9B2226] text-[#FFFFFF] shadow-sm scale-102'
                       : 'bg-[#FFFFFF] text-[#574F48] border border-[rgba(184,147,88,0.25)] hover:border-[#B89358]'

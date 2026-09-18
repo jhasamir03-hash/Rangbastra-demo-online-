@@ -173,7 +173,7 @@ export default function App() {
                 {/* Product Catalogue Grid (Responsive 1-col on mobile, 2-col on sm/md, 3-col on lg) */}
                 <section
                   id="products-catalogue-grid"
-                  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-28"
+                  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-20 md:pb-28"
                 >
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
                     {filteredProducts.map((product, index) => (
@@ -187,7 +187,7 @@ export default function App() {
                   </div>
 
                   {/* Micro Editorial Summary */}
-                  <div className="mt-14 pt-8 border-t border-[rgba(184,147,88,0.2)] text-center text-xs text-[#6E6259] font-sans">
+                  <div className="mt-8 sm:mt-14 pt-6 sm:pt-8 border-t border-[rgba(184,147,88,0.2)] text-center text-xs text-[#6E6259] font-sans">
                     <p>
                       Presenting {filteredProducts.length} of {PRODUCTS.length} curated showroom creations &bull; Handcrafted made-to-measure Navratri & bridal couture
                     </p>

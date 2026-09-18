@@ -37,21 +37,21 @@ export const Navbar: React.FC<NavbarProps> = ({
       id="main-navbar"
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#FAF8F5]/98 backdrop-blur-md shadow-sm border-b border-[rgba(184,147,88,0.25)] py-2.5 sm:py-3'
-          : 'bg-[#FAF8F5] border-b border-[rgba(184,147,88,0.2)] py-3 sm:py-4'
+          ? 'bg-[#FAF8F5]/98 backdrop-blur-md shadow-sm border-b border-[rgba(184,147,88,0.25)] py-2 sm:py-2.5'
+          : 'bg-[#FAF8F5] border-b border-[rgba(184,147,88,0.2)] py-2.5 sm:py-3.5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Responsive Grid Header: Left Navigation / Mobile Toggle | Center Logo | Right Links & Contact */}
-        <div className="flex items-center justify-between relative min-h-[48px]">
+        <div className="flex items-center justify-between relative min-h-[44px] sm:min-h-[48px]">
           
           {/* LEFT SECTION (Desktop Nav or Mobile Hamburger Button) */}
-          <div className="flex items-center w-12 md:w-auto md:flex-1 justify-start">
+          <div className="flex items-center w-10 sm:w-12 md:w-auto md:flex-1 justify-start shrink-0">
             {/* Mobile Hamburger Button (44px min touch target) */}
             <button
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden w-11 h-11 flex items-center justify-center text-[#1C1817] hover:text-[#B89358] transition-colors rounded-xs focus:outline-hidden"
+              className="md:hidden w-10 h-10 flex items-center justify-center text-[#1C1817] hover:text-[#B89358] transition-colors rounded-xs focus:outline-hidden cursor-pointer"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -88,22 +88,22 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* CENTER SECTION: Centered Text Logo for both Mobile & Desktop */}
           <div
             id="brand-logo-container"
-            className="flex-1 md:flex-initial flex flex-col items-center justify-center text-center cursor-pointer group px-2 select-none"
+            className="flex-1 flex flex-col items-center justify-center text-center cursor-pointer group px-1 sm:px-2 select-none min-w-0"
             onClick={onNavigateHome}
           >
             <span
               id="brand-wordmark"
-              className="font-serif text-xl sm:text-2xl md:text-3xl tracking-[0.22em] text-[#1C1817] font-semibold uppercase group-hover:text-[#B89358] transition-colors leading-tight"
+              className="font-serif text-lg xs:text-xl sm:text-2xl md:text-3xl tracking-[0.1em] sm:tracking-[0.22em] text-[#1C1817] font-semibold uppercase group-hover:text-[#B89358] transition-colors leading-tight truncate max-w-[200px] xs:max-w-[260px] sm:max-w-none"
             >
               {BRAND_DETAILS.brandName}
             </span>
-            <span className="text-[7.5px] sm:text-[9px] md:text-[10px] tracking-[0.32em] text-[#B89358] uppercase font-sans font-medium -mt-0.5">
+            <span className="text-[6.5px] xs:text-[7.5px] sm:text-[9px] md:text-[10px] tracking-[0.14em] sm:tracking-[0.32em] text-[#B89358] uppercase font-sans font-medium -mt-0.5 whitespace-nowrap">
               HAUTE COUTURE &bull; BRIDAL ATELIER
             </span>
           </div>
 
           {/* RIGHT SECTION: Desktop Extra Nav & WhatsApp Concierge / Mobile Right Quick WhatsApp Button */}
-          <div className="flex items-center w-12 md:w-auto md:flex-1 justify-end gap-3 lg:gap-5">
+          <div className="flex items-center w-10 sm:w-12 md:w-auto md:flex-1 justify-end gap-3 lg:gap-5 shrink-0">
             
             {/* Mobile Right Action: Quick WhatsApp Action (balanced with left toggle button to maintain exact center logo) */}
             <div className="md:hidden flex justify-end">

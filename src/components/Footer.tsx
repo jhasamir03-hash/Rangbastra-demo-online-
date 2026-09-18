@@ -24,20 +24,20 @@ export const Footer: React.FC = () => {
   return (
     <footer
       id="showroom-footer"
-      className="w-full bg-[#1C1817] text-[#FAF8F5] border-t border-[rgba(184,147,88,0.25)] pt-16 sm:pt-20 pb-12 font-sans"
+      className="w-full bg-[#1C1817] text-[#FAF8F5] border-t border-[rgba(184,147,88,0.25)] pt-10 sm:pt-16 pb-8 sm:pb-12 font-sans"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-14 pb-14 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-14 pb-8 sm:pb-12 border-b border-white/10">
           
           {/* Brand Identity & Founder Column (5 cols) */}
-          <div className="md:col-span-5 space-y-5 text-center md:text-left">
+          <div className="md:col-span-5 space-y-4 sm:space-y-5 text-center md:text-left">
             <div>
-              <span className="font-serif text-3xl sm:text-4xl tracking-[0.22em] text-[#FAF8F5] uppercase block font-bold">
+              <span className="font-serif text-2xl sm:text-4xl tracking-[0.12em] sm:tracking-[0.22em] text-[#FAF8F5] uppercase block font-bold">
                 {BRAND_DETAILS.brandName}
               </span>
-              <p className="text-[10px] tracking-[0.32em] uppercase text-[#D8C0A0] mt-1 font-semibold">
+              <p className="text-[9px] sm:text-[10px] tracking-[0.16em] sm:tracking-[0.32em] uppercase text-[#D8C0A0] mt-1 font-semibold">
                 HAUTE COUTURE &bull; BRIDAL & FESTIVE ATELIER
               </p>
             </div>
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="pt-1 text-xs text-[#C8C2BC]">
-              <span className="text-[#D8C0A0] block text-[11px] uppercase tracking-wider font-semibold">
+              <span className="text-[#D8C0A0] block text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold">
                 Showroom Lead & Founder:
               </span>
               <span className="font-semibold text-[#FAF8F5] text-sm font-serif">
@@ -56,8 +56,8 @@ export const Footer: React.FC = () => {
             </div>
 
             {/* Social Media Channels in Footer */}
-            <div className="pt-2">
-              <span className="text-[10px] uppercase tracking-[0.26em] text-[#D8C0A0] block mb-3 font-semibold">
+            <div className="pt-1 sm:pt-2">
+              <span className="text-[9.5px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.26em] text-[#D8C0A0] block mb-3 font-semibold">
                 Follow Atelier Journey
               </span>
               <div className="flex items-center justify-center md:justify-start gap-3">
@@ -126,7 +126,7 @@ export const Footer: React.FC = () => {
               Bespoke Concierge
             </span>
 
-            <ul className="space-y-3 text-xs text-[#C8C2BC]">
+            <ul className="space-y-2.5 text-xs text-[#C8C2BC]">
               <li className="flex items-center justify-center md:justify-start gap-2.5">
                 <Clock className="w-3.5 h-3.5 text-[#D8C0A0] shrink-0" />
                 <span>Showroom & Digital Video Consults Daily</span>
@@ -150,7 +150,7 @@ export const Footer: React.FC = () => {
                 id="footer-whatsapp-btn"
                 onClick={handleWhatsApp}
                 title="Direct WhatsApp: 091737 85595"
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] font-semibold rounded-full text-xs tracking-wider uppercase transition-colors shadow-md cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-[#080808] font-semibold rounded-full text-xs tracking-wider uppercase transition-colors shadow-md cursor-pointer w-full sm:w-auto"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
                 <span>WhatsApp: 091737 85595</span>
